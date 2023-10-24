@@ -1,0 +1,233 @@
+    .productContainer{
+        width: 250px;
+        height: 310px;
+        border: 2px solid #4f4f4f;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+    }
+
+    .thumbnail{
+        width: 100%;
+        height: 50%;
+        border: none;
+    }
+
+    .thumbnail img{
+        width: 70%;
+        height: 100%;
+        margin-left: 15%;
+    }
+
+    .action{
+        width: 100%;
+        height: 50%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .action p{
+        font-size: 18px;
+        margin-bottom: 25px;
+        font-weight: bold;
+    }
+
+    .productContainer button{
+        background-color: #4f4f4f;
+        width: 150px;
+        height: auto;
+        padding: 10px 10px 10px 10px;
+        color: white;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 20px;
+        bottom:0;
+    }
+
+    .about{
+        background-color: #eee;
+        padding:50px;
+    }
+
+    .about i{
+        font-size:30px;
+    }
+
+    .itd_circle{
+        margin: 0 auto 15px;
+        width:70px;
+        height:70px;
+        border:3px solid black;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .line{
+        width:100px;
+        height:3px;
+        background-color: black;
+        margin: 15px auto 30px;
+    }
+
+    .store{
+        padding: 100px;
+    }
+
+    .store h5{
+        padding:50;
+    }
+
+    .footer{
+        padding:10px;
+        margin-top:auto;
+        width: 100%;
+    }
+
+    .footer h4{
+        border-bottom: 1px solid white;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+    .footer a{
+        text-decoration:none;
+        transition: all 0.3s;
+    }
+
+    .footer a:hover{
+        text-decoration: underline;
+    }
+    .footer-icons a{
+        font-size:25px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    .my-carousel{
+        padding:0;
+    }
+    .my-carousel .carousel-item img{
+        object-fit:cover;
+    }
+    *{
+        font-family: 'Lato', sans-serif;
+    }
+    .shoppingCart{
+    width: 50%;
+    height: 600px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin:auto;
+    margin-top: 5%;
+}
+
+.shoppingCart p{
+    font-size: 20px;
+}
+
+.shoppingCart .heading{
+    width: 100%;
+    height: 50px;
+    /* border: 1px soild blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #4f4f4f;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+}
+.shoppingCart .name, .p_name{
+    /* border: 2px solid green; */
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shoppingCart .p_name{
+    width: 350px;
+}
+
+.shoppingCart .itemContainer{
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.shoppingCart .item{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid #4f4f4f;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.shoppingCart .item .iteminfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-direction: column; */
+
+    width: 350px;
+}
+
+.shoppingCart .item .iteminfo .p_img{
+    width: 30%;
+    height: 30%;
+    /* border: 2px solid black; */
+
+}
+.p_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shoppingCart button{
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    color: white;
+    width: 125px;
+    height:45px;
+    border: none;
+    cursor: pointer;
+}
+
+.shoppingCart .pay-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid black */
+}
+
+
+
+
+
+
+
+
+

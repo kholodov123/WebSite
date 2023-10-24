@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% for watched_product in watched_products %}
+{% block content %}
+<p>Name: {{ watched_product.product.name}}</p>
+<p>Price: {{ watched_product.product.price }}</p>
+<p>Timestamp: {{ watched_product.timestamp }}</p>
+<a href="{% url 'index' %}"><button onclick = "goBack()">Back</button></a>
+{% endblock content %}
+{% endfor %}
