@@ -8,9 +8,13 @@ from django.contrib.auth import authenticate, login
 
 
 def index(request):
-
     context = {}
     return render(request, "index.html", context)
+
+
+def success(request):
+    context = {}
+    return render(request, "success.html", context)
 
 
 def products(request):

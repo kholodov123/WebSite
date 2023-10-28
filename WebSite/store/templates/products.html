@@ -1,32 +1,82 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/products.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Products</title>
+</head>
+<body>
+    <header>
 
-{% block content %}
-
-<div class="container-fluid" style="margin-top:5%; width: 100%; height: auto; display: flex;
-    align-items: center; justify-content: center;">
-
-        {% for product in products  %}
-
-        <div class="productContainer">
-            <div class="thumbnail">
-                <img src="{{product.picture.url}}" alt=""
-                style="width:170px; ">
+        <div class="nav container">
+            <a href="{% url 'index' %}" class="logo">D.E.Online-shop</a>
+            <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <div class="cart-content">
+                </div>
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                            <div class="total-price">0$</div>
+                    </div>
+                <a href="{% url 'success' %}"><button type="button" class="btn-buy">Pay Now</button></a>
+                <i class="bx bx-x" id="close-cart"></i>
             </div>
-
-            <div class="action">
-
-                <p>{{product.name}}</p>
-
-                <p>${{product.price}}</p>
-
-                <button value="{{product.id}}">Add to Cart</button>
-
-            </div>
-
         </div>
 
-        {% endfor %}
+    </header>
 
-</div>
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="../../static/images/laptop.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">Laptop</h2>
+                <span class="price">1000$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="../../static/images/pc.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">PC</h2>
+                <span class="price">2000$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="../../static/images/ipone.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">iPhone</h2>
+                <span class="price">1500$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="../../static/images/mouse.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">Gaming Mouse</h2>
+                <span class="price">130$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="../../static/images/keyboard.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">Gaming Keyboard</h2>
+                <span class="price">250$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="../../static/images/phone.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">Android Phone</h2>
+                <span class="price">500$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+            <div class="product-box">
+                <img src="../../static/images/monitor.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">Monitor</h2>
+                <span class="price">350$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+    </section>
 
-{% endblock content %}
+<script src="../../static/js/main.js"></script>
+</body>
+</html>
