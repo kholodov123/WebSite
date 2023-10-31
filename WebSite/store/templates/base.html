@@ -23,32 +23,36 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="{% url 'index' %}">D.E. Online-store</a></div>
+            <div class="logo"><a href="{% url 'index' %}">D.E. Web-store</a></div>
             <ul class="links">
                 <li><a href="{% url 'index' %}">Home</a></li>
+                {% if user.is_authenticated %}
                 <li><a href="{% url 'products' %}">Catalog</a></li>
+                {% endif %}
                 {% if user.is_authenticated %}
                 <li><a href="#">User: {{ user.get_username }}</a></li>
-                <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                <li><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
                 {% else %}
-                <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+                <li><a href="{% url 'login'%}?next={{request.path}}">Sign in</a></li>
                 {% endif %}
             </ul>
-            <a href="#" class="action_btn">Account</a>
+            <a href="{% url 'profile' %}" class="action_btn">My Profile</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
             <li><a href="{% url 'index' %}">Home</a></li>
+            {% if user.is_authenticated %}
             <li><a href="{% url 'products' %}">Catalog</a></li>
+            {% endif %}
             {% if user.is_authenticated %}
             <li><a href="#">User: {{ user.get_username }}</a></li>
-            <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+            <li><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
                 {% else %}
-                <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+                <li><a href="{% url 'login'%}?next={{request.path}}">Sign in</a></li>
             {% endif %}
-            <li><a href="#" class="action_btn">Account</a></li>
+            <li><a href="{% url 'profile' %}" class="action_btn">My Profile</a></li>
         </div>
     </header>
 
@@ -112,5 +116,4 @@
     <script src="{% static 'js/script.js' %}"></script>
 
 </body>
-</div>
 </html>

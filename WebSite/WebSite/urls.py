@@ -11,6 +11,7 @@ urlpatterns = [
     path("", include("store.urls")),
     path("products", views.products, name="products"),
     path("success", views.success, name="success"),
+    path("profile", views.profile, name="profile"),
     path("cart", views.cart, name="cart"),
     path("add_to_cart", views.add_to_cart, name="add"),
     path("confirm_payment/<str:pk>", views.confirm_payment, name="add"),

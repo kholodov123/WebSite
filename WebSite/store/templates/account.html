@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link rel="stylesheet" href="../../static/css/account.css">
+    <link rel="stylesheet" href="../../static/css/fontello.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+{% if user.is_authenticated %}
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="{% url 'index' %}">D.E. Web-store</a></div>
+            <ul class="links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'products' %}">Catalog</a></li>
+                <li><a href="#">User: {{ user.get_username }}</a></li>
+                <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'products' %}">Catalog</a></li>
+            <li><a href="#">User: {{ user.get_username }}</a></li>
+            <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+        </div>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+    <div class="container">
+        <div class="profile-box">
+            <img src="../static/images/avatar.jpg" alt="" class="profile-pic">
+            <a href="#"><i class='bx bxs-cog settings'></i></a>
+            <a href="{% url 'index' %}"><i class="bx bx-x close"></i></a>
+            <h3>{{user.get_username}}</h3>
+            <div class="social-media">
+                <a href="#"><i class="icon-telegram"></i></a>
+                <a href="#"><i class="icon-vkontakte"></i></a>
+                <a href="#"><i class="icon-github-circled"></i></a>
+            </div>
+            <button class="action_btn">Follow</button>
+            <div class="profile-bottom">
+                <p>Learn More about My Profile</p>
+                <i class='bx bx-down-arrow-alt'></i>
+            </div>
+        </div>
+    </div>
+</body>
+{% else %}
+<h1>Sign in to see your profile</h1>
+{% endif %}

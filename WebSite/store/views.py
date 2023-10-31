@@ -12,6 +12,11 @@ def index(request):
     return render(request, "index.html", context)
 
 
+def profile(request):
+    contex = {}
+    return render(request, "account.html", contex)
+
+
 def success(request):
     context = {}
     return render(request, "success.html", context)
