@@ -173,7 +173,7 @@
     }
 
     .about{
-        background: linear-gradient(to bottom,  #330969 30%,#3c2584 67%,#1984aa 100%);
+        background:#330969;
         padding:50px;
         color:white;
     }
@@ -248,12 +248,3 @@
     .my-carousel .carousel-item img{
         object-fit:cover;
     }
-
-
-
-
-
-
-
-
-
