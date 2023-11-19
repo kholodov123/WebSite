@@ -125,8 +125,8 @@ def watched_list(request):
 
 class RegisterView(FormView):
     form_class = RegisterForm
-    template_name = 'registration.html'
-    success_url = reverse_lazy("index")
+    template_name = 'registration/registration.html'
+    success_url = reverse_lazy("login")
 
     def form_valid(self, form):
         form.save()
