@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>About</title>
     <link rel="stylesheet" href="../../static/css/account.css">
     <link rel="stylesheet" href="../../static/css/fontello.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -43,22 +43,27 @@
     }
 </style>
 
-{% if user.is_authenticated %}
 <body>
     <header>
         <div class="navbar">
             <div class="logo"><a href="{% url 'index' %}">Web-store</a></div>
             <ul class="links">
+                {% if user.is_authenticated %}
                 <li><a href="{% url 'products' %}">Catalog</a></li>
                 <li><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
+                {% endif %}
             </ul>
+            <a href="{% url 'profile' %}" class="action_btn">My Profile</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
+            {% if user.is_authenticated %}
             <li><a href="{% url 'products' %}">Catalog</a></li>
             <li><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
+            {% endif %}
+            <li><a href="{% url 'profile' %}" class="action_btn">My Profile</a></li>
         </div>
     </header>
 
@@ -77,21 +82,17 @@
         }
     </script>
     <div class="container">
-        <div class="profile-box">
-            <img src="../static/images/avatar.jpg" alt="" class="profile-pic">
-            <a href="#"><i class='bx bxs-cog settings'></i></a>
-            <a href="{% url 'index' %}"><i class="bx bx-x close"></i></a>
-            <h3>{{user.get_username}}</h3>
-            <div class="social-media">
-                <a href="#"><i class="icon-telegram"></i></a>
-                <a href="#"><i class="icon-vkontakte"></i></a>
-                <a href="#"><i class="icon-github-circled"></i></a>
-            </div>
-            <button class="action_btn">Follow</button>
-            <div class="profile-bottom">
-                <p>Learn More about My Profile</p>
-                <i class='bx bx-down-arrow-alt'></i>
-            </div>
+        <div class="about-box" style="
+    backdrop-filter:blur(15px);
+    border:2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    text-align:center;
+    padding: 40px 90px;
+    color:#fff;
+    position:relative;
+    border-radius:15px; height:50%; width:50%;">
+            <h1>About our company</h1>
+            <h3>Here is some information about our company and web-store</h3>
         </div>
     </div>
 
@@ -123,6 +124,7 @@
                 <h4>Follow us</h4>
                 <div class="footer-icons">
                     <a href="https://www.youtube.com/results?search_query=bootstrap"><i class="icon-youtube"></i></a>
+                    <a href=#><i class="icon-vkontakte"></i></a>
                     <a href="https://github.com/ruBootstrap"><i class="icon-github-circled"></i></a>
                     <a href="https://t.me/getbootstrap_ru"><i class="icon-telegram"></i></a>
                     <a href="https://twitter.com/getbootstrap"><i class="icon-twitter"></i></a>
@@ -132,6 +134,4 @@
     </footer>
 
 </body>
-{% else %}
-<h1>Sign in to see your profile</h1>
-{% endif %}
+</html>

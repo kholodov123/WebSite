@@ -8,11 +8,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Products</title>
 </head>
+
 <body>
     <header>
 
         <div class="nav container">
-            <a href="{% url 'index' %}" class="logo">D.E. Web-store</a>
+            <a href="{% url 'index' %}" class="logo">Web-store</a>
             <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
             <div class="cart">
                 <h2 class="cart-title">Your Cart</h2>
@@ -74,9 +75,17 @@
                 <span class="price">350$</span>
                 <i class="bx bx-shopping-bag add-cart"></i>
             </div>
+            <div class="product-box">
+                <img src="../../static/images/headphones.jpg" alt="" class="product-img"/>
+                <h2 class="product-title">Headphones</h2>
+                <span class="price">180$</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
         </div>
     </section>
 
 <script src="../../static/js/main.js"></script>
+
 </body>
+
 </html>

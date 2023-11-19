@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="../../static/css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="main-w3layouts wrapper">
+		<h1>Sign Up</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form method="post">
+                    {% csrf_token %}
+					<input class="text" type="text" name="username" placeholder="Username" required="">
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="password" name="password1" placeholder="Password" required="">
+					<input class="text w3lpass" type="password" name="password2" placeholder="Confirm Password" required="">
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+                    {{ form.errors }}
+					<input type="submit" value="SIGNUP">
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

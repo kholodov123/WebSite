@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Privacy policy</title>
     <link rel="stylesheet" href="../../static/css/account.css">
     <link rel="stylesheet" href="../../static/css/fontello.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,24 +41,39 @@
         color: white;
         text-decoration: none;
     }
+    .privacy-box{
+        backdrop-filter:blur(15px);
+        border:2px solid rgba(255, 255, 255, .2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        text-align:center;
+        padding: 20px 40px;
+        color:#fff;
+        position:relative;
+        border-radius:15px; height:50%; width:50%;
+    }
 </style>
 
-{% if user.is_authenticated %}
 <body>
     <header>
         <div class="navbar">
             <div class="logo"><a href="{% url 'index' %}">Web-store</a></div>
             <ul class="links">
+                {% if user.is_authenticated %}
                 <li><a href="{% url 'products' %}">Catalog</a></li>
                 <li><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
+                {% endif %}
             </ul>
+            <a href="{% url 'profile' %}" class="action_btn">My Profile</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
+            {% if user.is_authenticated %}
             <li><a href="{% url 'products' %}">Catalog</a></li>
             <li><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
+            {% endif %}
+            <li><a href="{% url 'profile' %}" class="action_btn">My Profile</a></li>
         </div>
     </header>
 
@@ -77,21 +92,11 @@
         }
     </script>
     <div class="container">
-        <div class="profile-box">
-            <img src="../static/images/avatar.jpg" alt="" class="profile-pic">
-            <a href="#"><i class='bx bxs-cog settings'></i></a>
-            <a href="{% url 'index' %}"><i class="bx bx-x close"></i></a>
-            <h3>{{user.get_username}}</h3>
-            <div class="social-media">
-                <a href="#"><i class="icon-telegram"></i></a>
-                <a href="#"><i class="icon-vkontakte"></i></a>
-                <a href="#"><i class="icon-github-circled"></i></a>
-            </div>
-            <button class="action_btn">Follow</button>
-            <div class="profile-bottom">
-                <p>Learn More about My Profile</p>
-                <i class='bx bx-down-arrow-alt'></i>
-            </div>
+        <div class="privacy-box">
+            <h1>Privacy Policy</h1>
+            <h6>1.1. The processing of personal data is carried out on a legal and fair basis.<br/>
+                1.2. The processing of personal data is limited to the achievement of specific, predetermined and legitimate goals. Processing of personal data incompatible with the purposes of personal data collection is not allowed.<br/>
+                1.3. It is not allowed to combine databases containing personal data, the processing of which is carried out for purposes incompatible with each other.<br/></h6>
         </div>
     </div>
 
@@ -102,7 +107,7 @@
                 <ul class="list-unstyled">
                     <li><a href="{% url 'about' %}">About us</a></li>
                     <li><a href="{% url 'contacts' %}">Contacts</a></li>
-                    <li><a href="{% url 'policy' %}">Privacy Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-6" style="color:white;">
@@ -132,6 +137,4 @@
     </footer>
 
 </body>
-{% else %}
-<h1>Sign in to see your profile</h1>
-{% endif %}
+</html>

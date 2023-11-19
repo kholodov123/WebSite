@@ -1,4 +1,8 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, FormView
+
+from .forms import RegisterForm
 from .models import Product, Cart, CartItem, WatchedList
 from django.http import JsonResponse
 import json
@@ -27,6 +31,26 @@ def products(request):
 
     context = {"products": products}
     return render(request, "products.html", context)
+
+
+def registration(request):
+    context = {}
+    return render(request, "registration.html", context)
+
+
+def about(request):
+    context = {}
+    return render(request, "about.html", context)
+
+
+def contacts(request):
+    context = {}
+    return render(request, "contacts.html", context)
+
+
+def policy(request):
+    context = {}
+    return render(request, "policy.html", context)
 
 
 def cart(request):
@@ -97,3 +121,13 @@ def watched_list(request):
     user = request.user
     watched_products = WatchedList.objects.filter(user=user).order_by('-timestamp')
     return render(request, 'watched_list.html', {'watched_products': watched_products})
+
+
+class RegisterView(FormView):
+    form_class = RegisterForm
+    template_name = 'registration.html'
+    success_url = reverse_lazy("index")
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)

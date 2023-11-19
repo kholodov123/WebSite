@@ -1,4 +1,4 @@
 from django.contrib import admin
 from .models import *
 
-admin.site.register([Category, Product, Cart, CartItem, WatchedList])
+admin.site.register([Category, Status, Brand, Model, Product, ProductInstance, Cart, CartItem, WatchedList])

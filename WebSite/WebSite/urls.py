@@ -3,8 +3,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from store import views
-
 from store.views import watched_list, watch_product
+
+from store.views import RegisterView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,6 +13,10 @@ urlpatterns = [
     path("products", views.products, name="products"),
     path("success", views.success, name="success"),
     path("profile", views.profile, name="profile"),
+    path('register', RegisterView.as_view(), name="register"),
+    path("about", views.about, name="about"),
+    path("contacts", views.contacts, name="contacts"),
+    path("policy", views.policy, name="policy"),
     path("cart", views.cart, name="cart"),
     path("add_to_cart", views.add_to_cart, name="add"),
     path("confirm_payment/<str:pk>", views.confirm_payment, name="add"),
