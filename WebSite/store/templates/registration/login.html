@@ -7,15 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../../static/css/login.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
+<style>
+    .close{
+        color:#fff;
+        position:absolute;
+        top:1.9rem;
+        left: 2.2rem;
+        font-size:2.8rem;
+    }
+</style>
 
 <body>
 
     <div class="wrapper">
      <form method="post" action="{% url 'login' %}">
          {% csrf_token %}
-      <h1>Login</h1>
+         <a href="{% url 'index' %}"><i class="bx bx-x close"></i></a>
+      <h1>Sign In</h1>
      {% if form.errors %}
         <i class='bx bx-error' style="display:flex; font-size:30px; color:#fff; justify-content:center; padding:10px;"></i>
         <p style="color:white; display:flex; justify-content:center;text-align:center;">Username and password did not match!<br/>Please try again later </p>
@@ -32,7 +43,7 @@
        <label><input type="checkbox">Remember me</label>
        <a href="{% url 'password_reset' %}">Forgot password?</a>
       </div>
-       <button type="submit" class="btn">Login</button>
+       <button type="submit" class="btn">Confirm</button>
        <input type="hidden" name="next" value="{{ next }}" />
       <div class="register-link">
        <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>

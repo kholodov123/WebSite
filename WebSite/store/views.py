@@ -53,6 +53,16 @@ def policy(request):
     return render(request, "policy.html", context)
 
 
+def settings(request):
+    context = {}
+    return render(request, "settings.html", context)
+
+
+def feedback(request):
+    context = {}
+    return render(request, "contact_form.html", context)
+
+
 def cart(request):
     cart = None
     cartitems = []
