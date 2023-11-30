@@ -12,25 +12,106 @@
         background-size:cover;
         background-position: center;
     }
-    .privacy-box{
-        background-color:#fff;
+    .terms-box{
+        max-width:460px;
+        background-color:#1e1e2a;
         border:2px solid rgba(255, 255, 255, .2);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        border-radius:15px;
+        color:#fff;
+        padding:60px 30px;
+    }
+    .terms-text{
+        padding:0 20px;
+        height:400px;
+        overflow-y: auto;
+        font-size:14px;
+        font-weight:500;
+        color:#f1f1f1;
+    }
+    .terms-text::-webkit-scrollbar{
+        width:2px;
+        background-color:#282828;
+    }
+    .terms-text::-webkit-scrollbar-thumb{
+        background-color:#d13639;
+    }
+    .terms-text h2{
+        text-transform:uppercase;
+    }
+    .terms-box h4{
+        font-size:13px;
         text-align:center;
-        padding: 20px 40px;
-        color:black;
-        position:relative;
-        border-radius:15px; height:50%; width:50%;
+        padding: 0 40px;
+        margin-top:20px;
+    }
+    .terms-box h4 span{
+        color:#d13639;
+    }
+    .buttons{
+        display:flex;
+        padding: 0 20px;
+        justify-content:space-between;
+    }
+    .btn{
+        height:50px;
+        width:40%;
+        border:0;
+        border-radius:15px;
+        font-size:19px;
+        font-weight:500;
+        color:#fff;
+        transition: .3s linear;
+    }
+    .red-btn{
+        background-color:#d13639;
+    }
+    .gray-btn{
+        background-color:#282828;
     }
 </style>
 
-
     <div class="container">
-        <div class="privacy-box">
-            <h1>Privacy Policy</h1>
-            <h6>1.1. The processing of personal data is carried out on a legal and fair basis.<br/>
-                1.2. The processing of personal data is limited to the achievement of specific, predetermined and legitimate goals. Processing of personal data incompatible with the purposes of personal data collection is not allowed.<br/>
-                1.3. It is not allowed to combine databases containing personal data, the processing of which is carried out for purposes incompatible with each other.<br/></h6>
+        <div class="terms-box">
+            <div class="terms-text">
+                <h2>Terms of Service</h2>
+                <p>Last Edit: 30/11/2023</p>
+                <p>Greetings Users,</p>
+                <p>1. Terms
+By accessing this Web Store, accessible from WebStore.com, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.</p>
+
+<p>2. Use License
+Permission is granted to temporarily download one copy of the materials on Company Name's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+
+-modify or copy the materials;
+-use the materials for any commercial purpose or for any public display;
+-attempt to reverse engineer any software contained on Company Name's Website;
+-remove any copyright or other proprietary notations from the materials; or
+-transferring the materials to another person or "mirror" the materials on any other server.
+-This will let Company Name to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format.</p>
+
+<p>3. Disclaimer
+All the materials on Company Name's Website are provided “as is”. Company Name makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, Company Name does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.</p>
+
+<p>4. Limitations
+Company Name or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on Company Name's Website, even if Company Name or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.</p>
+
+<p>5. Revisions and Errata
+The materials appearing on Company Name's Website may include technical, typographical, or photographic errors. Company Name will not promise that any of the materials in this Website are accurate, complete, or current. Company Name may change the materials contained on its Website at any time without notice. Company Name does not make any commitment to update the materials.</p>
+
+<p>6. Links
+Company Name has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by Company Name of the site. The use of any linked website is at the user's own risk.</p>
+
+<p>7. Site Terms of Use Modifications
+Company Name may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.</p>
+
+<p>8. Governing Law
+Any claim related to Company Name's Website shall be governed by the laws of Country without regards to its conflict of law provisions.</p>
+            </div>
+            <h4>I Agree to the <span>Terms of Service</span> and I read the Privacy Notice.</h4>
+            <div class="buttons">
+                <button class="btn red-btn">Accept</button>
+                <button class="btn gray-btn">Decline</button>
+            </div>
         </div>
     </div>
 
