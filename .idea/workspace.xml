@@ -6,13 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="32fd1945-47a1-4b1c-960b-add76765b924" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/WebSite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/WebSite/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/static/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/static/css/products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/store/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/store/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/store/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/registration/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/registration/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700819056575</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <option name="closed" value="true" />
+      <created>1701070735558</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701070735558</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

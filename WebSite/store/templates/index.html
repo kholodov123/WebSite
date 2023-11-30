@@ -6,7 +6,7 @@
     <section id="hero">
         {% if user.is_authenticated %}
         <h1>Welcome, {{user.get_username}}</h1>
-        <p>This is simple Digital Equipment web-store <br/> made with Django, Python, HTML, CSS & JS</p>
+        <p>This is the main page of my Web Store</p>
         <a href="{% url 'products' %}"><button type="button" class="btn" style="display:flex; margin:auto;
                     margin-top: 10px; margin-bottom:10px; border-radius:40px; background-color:white;">Show available products</button></a>
         {% else %}
@@ -16,7 +16,7 @@
     </section>
 </main>
 
-<section class="about" id="about">
+<section class="about" id="about" style="background-color: #1e1e2a;">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -43,11 +43,6 @@ def about(request):
     return render(request, "about.html", context)
 
 
-def contacts(request):
-    context = {}
-    return render(request, "contacts.html", context)
-
-
 def policy(request):
     context = {}
     return render(request, "policy.html", context)

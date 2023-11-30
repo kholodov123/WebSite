@@ -1,61 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <link rel="stylesheet" href="../../static/css/login.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+{% block content %}
 
 <style>
-	input{
-		width:100%;
-		height:100%;
-		background:transparent;
-		border:none;
-		outline:none;
-		border:2px solid rgba(255, 255, 255, .2);
-		border-radius:40px;
-		font-size:16px;
-		color:#fff;
-		padding:20px 45px 20px 20px;
-	}
-	.back{
-        color:#fff;
-        position:absolute;
-        top:1.9rem;
-        left: 2.2rem;
-        font-size:2.5rem;
-    }
+.container-fluid{
+    width:100%;
+    height:100vh;
+    display:flex;
+    margin:auto;
+    justify-content:center;
+    align-items:center;
+}
+.wrapper{
+    width:420px;
+    background:transparent;
+    border:2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color:#fff;
+    border-radius:15px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size:30px;
+    text-align:center;
+}
+
+.wrapper .input-box{
+    position:relative;
+    width:100%;
+    height:50px;
+    margin:30px 0;
+}
+
+.input-box input{
+    width:100%;
+    height:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    border:2px solid rgba(255, 255, 255, .2);
+    border-radius:40px;
+    font-size:16px;
+    color:#fff;
+    padding:20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color:#fff;
+}
+
+.input-box i{
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:20px;
+}
+
+.wrapper .remember-forgot{
+    display:flex;
+    justify-content:space-between;
+    font-size: 14.5px;
+    margin:-15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right:3px;
+}
+
+.remember-forgot a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration:underline;
+}
+
+.wrapper .btn{
+    width:100%;
+    height:45px;
+    background:#02ac70;
+    border:none;
+    outline:none;
+    border-radius:40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor:pointer;
+    font-size:16px;
+    color:#fff;
+    font-weight:600;
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align:center;
+    margin:20px 0 15px;
+}
+
+.register-link p a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.register-link p a:hover{
+    text-decoration:underline;
+}
 </style>
 
-<body>
+<div class="container-fluid">
 
     <div class="wrapper">
 		<form method="post">
 			{% csrf_token %}
-			<a href="{% url 'login'%}?next={{request.path}}"><i class='bx bx-arrow-back back'></i></a>	
-		<h1>Sign Up</h1>
+		<h1>Sign Up to Web Store</h1>
 		<div class="input-box">
-			<input class="text" type="text" name="username" placeholder="Username" required="">
+			<input class="text" type="text" name="username" placeholder="Username" required=""><i class='bx bxs-user'></i>
 		</div>
 		<div class="input-box">
-			<input class="text email" type="email" name="email" placeholder="Email" required="">
+			<input class="text email" type="email" name="email" placeholder="Email" required=""><i class='bx bx-envelope'></i>
 		</div>
 		<div class="input-box">
-			<input class="text" type="password" name="password1" placeholder="Password" required="">
+			<input class="text" type="password" name="password1" placeholder="Password" required=""><i class='bx bx-lock-alt'></i>
 		</div>
 		<div class="input-box">
-			<input class="text w3lpass" type="password" name="password2" placeholder="Confirm Password" required="">
+			<input class="text w3lpass" type="password" name="password2" placeholder="Confirm Password" required=""><i class='bx bx-check-circle' ></i>
 		</div>
 			{{ form.errors }}
-			<button type="submit" class="btn">Confirm</button>
+			<button type="submit" class="btn">Sign up</button>
        <input type="hidden" name="next" value="{{ next }}" />
 		</form>
 	</div>
 
-</body>
-</html>
+</div>
+
+{% endblock content %}

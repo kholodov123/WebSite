@@ -3,13 +3,16 @@
 {% load static %}
 
 <style>
-    body{
-        background: url(../../static/images/background-login.jpg) no-repeat;
-    }
     .dropdown_menu i{
         position:fixed;
         color:#fff;
         margin-right:100px;
+    }
+    header{
+        box-shadow: 0 1px 4px hsla(0, 0%, 98%, 0.1);
+    }
+    footer{
+        box-shadow: 0 1px 8px hsla(0, 0%, 98%, 0.1);
     }
 </style>
 
@@ -26,7 +29,7 @@
     <link rel="stylesheet" href="../../static/css/style.css">
 </head>
 
-<body>
+<body style="height:100vh; background-color: #1e1e2a; background-size:cover; background-position:center;">
 {% if user.is_authenticated %}
     <header>
         <div class="navbar">
@@ -63,7 +66,6 @@
         </div>
         <div class="dropdown_menu">
             <li><i class='bx bx-info-circle' ></i><a href="{% url 'about' %}">About us</a></li>
-            <li><i class='bx bxs-contact'></i><a href="{% url 'contacts' %}">Contacts</a></li>
             <li><i class='bx bxs-help-circle'></i><a href="{% url 'feedback' %}">Help</a></li>
             <li><i class='bx bx-log-in' ></i><a href="{% url 'login'%}?next={{request.path}}">Sign in</a></li>
             <li><a href="{% url 'profile' %}" class="action_btn">My Profile</a></li>
@@ -91,13 +93,12 @@
 
      {% endblock content %}
 
-<footer class="footer footer-dark bg-dark">
+<footer class="footer">
         <div class="row">
             <div class="col-md-3 col-6" style="color:white;">
                 <h4>Information</h4>
                 <ul class="list-unstyled">
                     <li><a href="{% url 'about' %}">About us</a></li>
-                    <li><a href="{% url 'contacts' %}">Contacts</a></li>
                     <li><a href="{% url 'policy' %}">Privacy Policy</a></li>
                     <li><a href="{% url 'feedback' %}">Help</a></li>
                 </ul>

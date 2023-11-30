@@ -12,23 +12,68 @@
         background-size:cover;
         background-position: center;
     }
-    .about-box{
-        background-color:#fff;
-        border:2px solid rgba(255, 255, 255, .2);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        text-align:center;
-        padding: 20px 40px;
-        color:black;
-        position:relative;
-        border-radius:15px; height:50%; width:50%;
+    .about-us{
+        width:100%;
+        padding: 78px 0px;
+        background-color:#1e1e2a;
+    }
+    .about img{
+        height:auto;
+        width:420px;
+    }
+    .about-text{
+        width:550px;
+    }
+    .main-about{
+        width:1130px;
+        max-width:95%;
+        margin: 0 auto;
+        display:flex;
+        align-items:center;
+        justify-content:space-around;
+    }
+    .about-text h1{
+        color:white;
+        font-size:80px;
+        text-transform:capitalize;
+        margin-bottom:20px;
+    }
+    .about-text p{
+        color:#fcfc;
+        letter-spacing:1px;
+        line-height:28px;
+        font-size:18px;
+        margin-bottom:45px;
+    }
+    button{
+        background:#fff;
+        color:#000000;
+        text-decoration:none;
+        border: 2px solid transparent;
+        padding: 13px 30px;
+        border-radius:40px;
+        transition: .4s;
+    }
+    button:hover{
+        scale: 1.05;
+    }
+
+    button:active{
+        scale: 0.95;
     }
 </style>
 
     <div class="container">
-        <div class="about-box">
-            <h1>About our company</h1>
-            <h4>Here is some information about our company and web-store</h4>
-        </div>
+        <section class="about-us">
+            <div class="main-about">
+                <img src="../../static/images/laptop.jpg" alt="">
+                <div class="about-text">
+                    <h1>About us</h1>
+                    <p>This is simple Web Store made with Django, HTML, CSS, JavaScript</p>
+                    <a href="{% url 'products' %}"><button type="button">Let's move on to the catalog!</button></a>
+                </div>
+            </div>
+        </section>
     </div>
 
 {% endblock content %}
