@@ -13,7 +13,7 @@
 }
 
     .body{
-        height:100vh;
+        height:calc(100vh-60px);
         background-color: #1e1e2a;
         background-size:cover;
         background-position:center;
@@ -140,16 +140,6 @@
     main{
         width:100%;
         height:100vh;
-    }
-
-    section#hero{
-        height:calc(100vh-60px);
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        text-align:center;
-        color:#fff;
     }
 
     #hero h1{

@@ -18,6 +18,7 @@ urlpatterns = [
     path("policy", views.policy, name="policy"),
     path("settings", views.settings, name="settings"),
     path("feedback", views.feedback, name="feedback"),
+    path("info", views.info, name="info"),
     path("cart", views.cart, name="cart"),
     path("add_to_cart", views.add_to_cart, name="add"),
     path("confirm_payment/<str:pk>", views.confirm_payment, name="add"),

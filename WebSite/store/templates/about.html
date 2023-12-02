@@ -17,8 +17,8 @@
         padding: 78px 0px;
         background-color:#1e1e2a;
     }
-    .about img{
-        height:auto;
+    .about .img{
+        height:420px;
         width:420px;
     }
     .about-text{
@@ -66,10 +66,11 @@
     <div class="container">
         <section class="about-us">
             <div class="main-about">
-                <img src="../../static/images/laptop.jpg" alt="">
+                <img src="../../static/images/logotip.jpg" alt="" style="height:420px;
+        width:420px; border-radius:50%;">
                 <div class="about-text">
                     <h1>About us</h1>
-                    <p>This is simple Web Store made with Django, HTML, CSS, JavaScript</p>
+                    <p>This is simple Web Store created using Django, Python, HTML, CSS, JavaScript. It's open 24 ours a day. Here you can buy any digital equipment.</p>
                     <a href="{% url 'products' %}"><button type="button">Let's move on to the catalog!</button></a>
                 </div>
             </div>

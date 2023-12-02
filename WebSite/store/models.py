@@ -36,7 +36,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, null=True)
     model = models.ForeignKey(Model, on_delete=models.CASCADE, null=True)
-    description = models.TextField(max_length=200, null=True)
+    description = models.TextField(max_length=1500, null=True)
     price = models.IntegerField()
     picture = models.ImageField(upload_to="images", default="")
 

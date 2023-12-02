@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.views import generic
 from django.views.generic import CreateView, FormView
 
 from .forms import RegisterForm
@@ -56,6 +57,11 @@ def settings(request):
 def feedback(request):
     context = {}
     return render(request, "contact_form.html", context)
+
+
+def info(request):
+    context = {}
+    return render(request, "info.html", context)
 
 
 def cart(request):

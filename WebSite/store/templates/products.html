@@ -9,6 +9,31 @@
     <title>Products</title>
 </head>
 
+<style>
+    .product-box .btn{
+        font-size:0.9rem;
+        border:none;
+        border-radius:10px;
+        background:#fff;
+        display:flex;
+        margin:auto;
+        padding:5px;
+        cursor:pointer;
+    }
+    .product-info:hover{
+        text-decoration:underline;
+    }
+    .product-box:hover .product-title,
+    .product-box:hover .price,
+    .product-box:hover .product-info{
+        color:#141414;
+    }
+    .product-box:hover .btn{
+        background:#1e1e2a;
+        color:#fff;
+    }
+</style>
+
 <body>
     <header>
 
@@ -33,56 +58,18 @@
     <section class="shop container">
         <h2 class="section-title">Shop Products</h2>
         <div class="shop-content">
+            {% for product in products %}
             <div class="product-box">
-                <img src="../../static/images/laptop.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">Laptop</h2>
-                <span class="price">1000$</span>
+                <img src="{{product.picture.url}}" alt="" class="product-img"/>
+                <h2 class="product-title">{{product.name}}</h2>
+                <span class="price">{{product.price}}$</span>
+                <a href="{% url 'info' %}"><button class="btn" id="product-info" value="{{product.id}}">Detailed info</button></a>
                 <i class="bx bx-shopping-bag add-cart"></i>
             </div>
-            <div class="product-box">
-                <img src="../../static/images/pc.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">PC</h2>
-                <span class="price">2000$</span>
-                <i class="bx bx-shopping-bag add-cart"></i>
-            </div>
-            <div class="product-box">
-                <img src="../../static/images/ipone.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">iPhone</h2>
-                <span class="price">1500$</span>
-                <i class="bx bx-shopping-bag add-cart"></i>
-            </div>
-            <div class="product-box">
-                <img src="../../static/images/mouse.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">Gaming Mouse</h2>
-                <span class="price">130$</span>
-                <i class="bx bx-shopping-bag add-cart"></i>
-            </div>
-            <div class="product-box">
-                <img src="../../static/images/keyboard.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">Gaming Keyboard</h2>
-                <span class="price">250$</span>
-                <i class="bx bx-shopping-bag add-cart"></i>
-            </div>
-            <div class="product-box">
-                <img src="../../static/images/phone.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">Android Phone</h2>
-                <span class="price">500$</span>
-                <i class="bx bx-shopping-bag add-cart"></i>
-            </div>
-            <div class="product-box">
-                <img src="../../static/images/monitor.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">Monitor</h2>
-                <span class="price">350$</span>
-                <i class="bx bx-shopping-bag add-cart"></i>
-            </div>
-            <div class="product-box">
-                <img src="../../static/images/headphones.jpg" alt="" class="product-img"/>
-                <h2 class="product-title">Headphones</h2>
-                <span class="price">180$</span>
-                <i class="bx bx-shopping-bag add-cart"></i>
-            </div>
+            {% endfor %}
         </div>
     </section>
+    {% block content %}{% endblock content %}
 
 <script src="../../static/js/main.js"></script>
 
