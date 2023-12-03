@@ -16,13 +16,13 @@
 <main>
     <section id="hero">
         {% if user.is_authenticated %}
-        <h1>Welcome, {{user.get_username}}</h1>
-        <p>This is the main page of my Web Store</p>
-        <a href="{% url 'products' %}"><button type="button" class="btn" style="display:flex; margin:auto;
+        <h1 class="lang" key="welcome">Welcome, {{user.get_username}}!</h1>
+        <p class="lang" key="auth_welcome">This is the main page of my Web-Store</p>
+        <a href="{% url 'products' %}"><button type="button" class="btn lang" key="show" style="display:flex; margin:auto;
                     margin-top: 10px; margin-bottom:10px; border-radius:40px; background-color:white;">Show available products</button></a>
         {% else %}
-        <h1>Welcome, user</h1>
-        <p>This is simple Digital Equipment web-store <br/> made with Django, Python, HTML, CSS & JS<br/>Sign in to see more!</p>
+        <h1 class="lang" key="welcome">Welcome!</h1>
+        <p class="lang" key="unauth_welcome">This is the main page of my Web-Store <br/>Sign in to see more!</p>
         {% endif %}
     </section>
 </main>
@@ -31,38 +31,38 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center text-uppercase color-white mb-5">About store</h2>
+                <h2 class="text-center text-uppercase color-white mb-5 lang" key="ab_st">About store</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle"><i class="icon-apple"></i></div>
-                <h5 class="text-center">Large Assortment</h5>
+                <h5 class="text-center lang" key="l_a">Large Assortment</h5>
                 <div class="line line-light bg-light"></div>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle"><i class="icon-globe"></i></div>
-                <h5 class="text-center">Worldwide Shipping</h5>
+                <h5 class="text-center lang" key="w_s">Worldwide Shipping</h5>
                 <div class="line line-light bg-light"></div>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle"><i class="icon-rocket"></i></div>
-                <h5 class="text-center">Fast Delivery</h5>
+                <h5 class="text-center lang" key="f_d">Fast Delivery</h5>
                 <div class="line line-light bg-light"></div>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle"><i class="icon-credit-card"></i></div>
-                <h5 class="text-center">All Payment Methods</h5>
+                <h5 class="text-center lang" key="a_pm">All Payment Methods</h5>
                 <div class="line line-light bg-light"></div>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle"><i class="icon-dollar"></i></div>
-                <h5 class="text-center">Low Prices</h5>
+                <h5 class="text-center lang" key="l_p">Low Prices</h5>
                 <div class="line line-light bg-light"></div>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
                 <div class="itd_circle"><i class="icon-star-empty"></i></div>
-                <h5 class="text-center">High Reliability</h5>
+                <h5 class="text-center lang" key="h_r">High Reliability</h5>
                 <div class="line line-light bg-light"></div>
             </div>
         </div>

@@ -14,6 +14,12 @@
     footer{
         box-shadow: 0 1px 8px hsla(0, 0%, 98%, 0.1);
     }
+    .translate{
+        cursor:pointer;
+    }
+    .translate:hover{
+        text-decoration:underline;
+    }
 </style>
 
 <html lang="en">
@@ -33,22 +39,24 @@
 {% if user.is_authenticated %}
     <header>
         <div class="navbar">
-            <div class="logo"><a href="{% url 'index' %}">Web-store</a></div>
+            <div class="logo">
+                <a href="{% url 'index' %}">Web-store</a>
+            </div>
             <ul class="links">
-                <li><a href="{% url 'products' %}">Catalog</a></li>
-                <li><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
+                <li><a href="{% url 'products' %}" class="lang" key="catalog">Catalog</a></li>
+                <li><a href="{% url 'logout'%}?next={{request.path}}" class="lang" key="logout">Sign out</a></li>
             </ul>
-            <a href="{% url 'profile' %}" class="action_btn">My Profile</a>
+            <a href="{% url 'profile' %}" class="action_btn lang" key="action_btn">My Profile</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
-            <li><i class='bx bx-cart' ></i><a href="{% url 'products' %}">Catalog</a></li>
-            <li><i class='bx bx-info-circle' ></i><a href="{% url 'about' %}">About us</a></li>
-            <li><i class='bx bxs-help-circle'></i><a href="{% url 'feedback' %}">Help</a></li>
-            <li><i class='bx bx-log-out'></i><a href="{% url 'logout'%}?next={{request.path}}">Sign out</a></li>
-            <li><a href="{% url 'profile' %}" class="action_btn">My Profile</a></li>
+            <li><i class='bx bx-cart' ></i><a href="{% url 'products' %}" class="lang" key="catalog">Catalog</a></li>
+            <li><i class='bx bx-info-circle' ></i><a href="{% url 'about' %}" class="lang" key="about">About us</a></li>
+            <li><i class='bx bxs-help-circle'></i><a href="{% url 'feedback' %}" class="lang" key="help">Help</a></li>
+            <li><i class='bx bx-log-out'></i><a href="{% url 'logout'%}?next={{request.path}}" class="lang" key="logout">Sign out</a></li>
+            <li><a href="{% url 'profile' %}" class="action_btn lang" key="action_btn">My Profile</a></li>
         </div>
     </header>
 {% else %}
@@ -57,18 +65,18 @@
         <div class="navbar">
             <div class="logo"><a href="{% url 'index' %}">Web-store</a></div>
             <ul class="links">
-                <li><a href="{% url 'login'%}?next={{request.path}}">Sign in</a></li>
+                <li><a href="{% url 'login'%}?next={{request.path}}" class="lang" key="login">Sign in</a></li>
             </ul>
-            <a href="{% url 'profile' %}" class="action_btn">My Profile</a>
+            <a href="{% url 'profile' %}" class="action_btn lang" key="action_btn">My Profile</a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
         <div class="dropdown_menu">
-            <li><i class='bx bx-info-circle' ></i><a href="{% url 'about' %}">About us</a></li>
-            <li><i class='bx bxs-help-circle'></i><a href="{% url 'feedback' %}">Help</a></li>
-            <li><i class='bx bx-log-in' ></i><a href="{% url 'login'%}?next={{request.path}}">Sign in</a></li>
-            <li><a href="{% url 'profile' %}" class="action_btn">My Profile</a></li>
+            <li><i class='bx bx-info-circle' ></i><a href="{% url 'about' %}" class="lang" key="about">About us</a></li>
+            <li><i class='bx bxs-help-circle'></i><a href="{% url 'feedback' %}" class="lang" key="help">Help</a></li>
+            <li><i class='bx bx-log-in' ></i><a href="{% url 'login'%}?next={{request.path}}" class="lang" key="login">Sign in</a></li>
+            <li><a href="{% url 'profile' %}" class="action_btn lang" key="action_btn">My Profile</a></li>
         </div>
     </header>
 
@@ -96,29 +104,30 @@
 <footer class="footer">
         <div class="row">
             <div class="col-md-3 col-6" style="color:white;">
-                <h4>Information</h4>
+                <h4 class="lang" key="info">Information</h4>
                 <ul class="list-unstyled">
-                    <li><a href="{% url 'about' %}">About us</a></li>
-                    <li><a href="{% url 'policy' %}">Terms of Service</a></li>
-                    <li><a href="{% url 'feedback' %}">Help</a></li>
+                    <li><a href="{% url 'about' %}" class="lang" key="about">About us</a></li>
+                    <li><a href="{% url 'policy' %}" class="lang" key="terms">Terms of Service</a></li>
+                    <li><a href="{% url 'feedback' %}" class="lang" key="help">Help</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-6" style="color:white;">
-                <h4>Working hours</h4>
+                <h4 class="lang" key="work">Working hours</h4>
                 <ul class="list-unstyled">
-                    <li>Kursk city</li>
-                    <li>Monday-Sunday: 24 ours a day</li>
-                    <li>Without a break</li>
+                    <li class="lang" key="city">Kursk city</li>
+                    <li class="lang" key="week">Monday-Sunday: 24 ours a day</li>
+                    <li class="lang" key="break">Without a break</li>
                 </ul>
             </div>
             <div class="col-md-3 col-6" style="color:white;">
-                <h4>Contacts</h4>
+                <h4 class="lang" key="language">Language</h4>
                 <ul class="list-unstyled">
-                    <li><a href="tel:+1234567890">+1234567890</a></li>
+                    <li class="header-item-lang-en translate lang" id="en" key="eng">English</li>
+                    <li class="header-item-lang-ru translate lang" id="ru" key="rus">Russian</li>
                 </ul>
             </div>
             <div class="col-md-3 col-6" style="color:white;">
-                <h4>Follow us</h4>
+                <h4 class="lang" key="follow">Follow us</h4>
                 <div class="footer-icons">
                     <a href="https://www.youtube.com/results?search_query=bootstrap"><i class="icon-youtube"></i></a>
                     <a href="https://github.com/ruBootstrap"><i class="icon-github-circled"></i></a>
@@ -150,6 +159,8 @@
     );
     }
 </script>
+
+<script src="../../static/js/jquery.min.js"></script>
 
 </body>
 </html>
