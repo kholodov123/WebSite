@@ -6,37 +6,25 @@
     .container{
         width:100%;
         height:100vh;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        background-size:cover;
-        background-position: center;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
-    .about-us{
-        width:100%;
-        padding: 78px 0px;
-        background-color:#1e1e2a;
-    }
-    .about .img{
-        height:420px;
-        width:420px;
+    .location{
+        display: flex;
+        margin:auto;
+        justify-content: center;
+        align-items: center;
     }
     .about-text{
-        width:550px;
-    }
-    .main-about{
-        width:1130px;
-        max-width:95%;
-        margin: 0 auto;
-        display:flex;
-        align-items:center;
-        justify-content:space-around;
+        width:auto;
     }
     .about-text h1{
         color:white;
         font-size:80px;
         text-transform:capitalize;
         margin-bottom:20px;
+        margin-top:50px;
     }
     .about-text p{
         color:#fcfc;
@@ -45,33 +33,22 @@
         font-size:18px;
         margin-bottom:45px;
     }
-    button{
-        background:#fff;
-        color:#000000;
-        text-decoration:none;
-        border: 2px solid transparent;
-        padding: 13px 30px;
-        border-radius:40px;
-        transition: .4s;
-    }
-    button:hover{
-        scale: 1.05;
-    }
-
-    button:active{
-        scale: 0.95;
+    .main-about{
+        width:390px;
+        height:auto;
     }
 </style>
 
     <div class="container">
         <section class="about-us">
             <div class="main-about">
-                <img src="../../static/images/logotip.jpg" alt="" style="height:420px;
-        width:420px; border-radius:50%;">
                 <div class="about-text">
                     <h1 class="lang" key="about">About us</h1>
                     <p class="lang" key="about_p">This is simple Web Store created using Django, Python, HTML, CSS, JavaScript. It's open 24 ours a day. Here you can buy any digital equipment.</p>
-                    <a href="{% url 'products' %}"><button type="button" class="lang" key="btn_move">Let's move on to the catalog!</button></a>
+                    <p class="lang" key="">You can find our store here!</p>
+                    <div class="location">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cb3beb78b6bb9de3181d7a81630232634811876a2ee116b893e16e24e4aca83&amp;width=380&amp;height=400&amp;lang=ru_RU&amp;scroll=true;"></script>
+                    </div>
                 </div>
             </div>
         </section>

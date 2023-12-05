@@ -20,6 +20,160 @@
     .translate:hover{
         text-decoration:underline;
     }
+    .chatbot-toggle{
+        position:fixed;
+        bottom:35px;
+        right:40px;
+        height:50px;
+        width:50px;
+        color:#fff;
+        background:orange;
+        border-radius:50%;
+        border:none;
+        outline:none;
+        cursor:pointer;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition: all 0.2s ease;
+    }
+    .show-chatbot .chatbot-toggle{
+        transform: rotate(90deg);
+    }
+    .chatbot-toggle span{
+        position:absolute;
+        font-size:20px;
+    }
+    .show-chatbot .chatbot-toggle span:first-child,
+    .chatbot-toggle span:last-child{
+        opacity:0;
+    }
+    .show-chatbot .chatbot-toggle span:last-child{
+        opacity:1;
+    }
+    .chatbot{
+        background:#fff;
+        width:420px;
+        position:fixed;
+        right:40px;
+        bottom:100px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+        transform:scale(0.5);
+        opacity:0;
+        pointer-events: none;
+        transition: all 0.1s ease;
+        transform-origin:bottom right;
+    }
+    .show-chatbot .chatbot{
+        transform:scale(1);
+        opacity:1;
+        pointer-events: auto;
+    }
+    .chatbot header{
+        background: orange;
+        padding: 16px 0;
+        text-align: center;
+        position:relative;
+    }
+    .chatbot header h2{
+        color:#fff;
+        font-size:1.4rem;
+    }
+    .chatbot header span{
+        position:absolute;
+        right:20px;
+        top:50%;
+        color:#fff;
+        cursor:pointer;
+        transform:translateY(-50%);
+        display:none;
+    }
+    .chatbot .chatbox{
+        height: 510px;
+        overflow-y: auto;
+        padding:30px 20px 100px;
+    }
+    .chatbox .chat{
+        display:flex;
+    }
+    .chatbox .outgoing{
+        justify-content:flex-end;
+        margin:20px 0;
+    }
+
+    .chatbox .chat p{
+        background:orange;
+        padding:12px 16px;
+        color:#fff;
+        white-space:pre-wrap;
+        border-radius: 10px 10px 0 10px;
+        font-size: 0.95rem;
+        max-width:75%;
+    }
+    .chatbox .incoming p{
+        background: #eee;
+        color:#000;
+        border-radius:10px 10px 10px 0;
+    }
+    .chatbox .incoming span{
+        height:32px;
+        width:32px;
+        background:orange;
+        color:#fff;
+        align-self:flex-end;
+        text-align:center;
+        line-height:32px;
+        border-radius:4px;
+        font-size:20px;
+        margin:0 10px 7px 0;
+    }
+    .chatbot .chat-input{
+        position:absolute;
+        bottom:0;
+        border-top:1px solid #eee;
+        width:100%;
+        display:flex;
+        gap:5px;
+        background:#fff;
+        padding:5px 20px;
+    }
+    .chat-input textarea{
+        height:55px;
+        width:100%;
+        border:none;
+        outline:none;
+        font-size:0.95rem;
+        resize:none;
+        padding:16px 15px 16px 0;
+    }
+    .chat-input span{
+        color:orange;
+        font-size:1.35rem;
+        cursor:pointer;
+        align-self:flex-end;
+        height:55px;
+        line-height:55px;
+        visibility:hidden;
+    }
+    .chat-input textarea:valid ~ span{
+        visibility:visible;
+    }
+    @media(max-width:490px){
+        .chatbot{
+            right:0;
+            bottom:0;
+            width:100%;
+            height:100%;
+            border-radius:0;
+        }
+        .chatbot .chatbox{
+            height:90%;
+        }
+        .chatbot header span{
+            display:block;
+    }
 </style>
 
 <html lang="en">
@@ -78,7 +232,7 @@
             <li><i class='bx bx-log-in' ></i><a href="{% url 'login'%}?next={{request.path}}" class="lang" key="login">Sign in</a></li>
             <li><a href="{% url 'profile' %}" class="action_btn lang" key="action_btn">My Profile</a></li>
         </div>
-    </header>
+</header>
 
 {% endif %}
 
@@ -96,6 +250,26 @@
             : 'fa-solid fa-bars'
         }
     </script>
+<button class="chatbot-toggle">
+    <span class="material-symbols-outlined"><i class='bx bx-chat'></i></span>
+    <span class="material-symbols-outlined"><i class='bx bx-x' style="font-size:30px;"></i></span>
+</button>
+<div class="chatbot">
+    <header>
+        <h2>Chatbot</h2>
+        <span class="close-btn material-symbols-outlined"><i class='bx bx-x' style="font-size:30px;"></i></span>
+    </header>
+    <ul class="chatbox">
+        <li class="chat incoming">
+            <span class="material-symbols-outlined"><i class="bx bx-bot"></i></span>
+            <p>Hi there!<br> How can I help you today?</p>
+        </li>
+    </ul>
+    <div class="chat-input">
+        <textarea placeholder="Enter a message..." required></textarea>
+        <span id="send-btn" class="material-symbols-outlined"><i class='bx bx-send'></i></span>
+    </div>    
+</div>
 
      {% block content %}
 
@@ -114,7 +288,6 @@
             <div class="col-md-3 col-6" style="color:white;">
                 <h4 class="lang" key="work">Working hours</h4>
                 <ul class="list-unstyled">
-                    <li class="lang" key="city">Kursk city</li>
                     <li class="lang" key="week">Monday-Sunday: 24 ours a day</li>
                     <li class="lang" key="break">Without a break</li>
                 </ul>
@@ -161,6 +334,7 @@
 </script>
 
 <script src="../../static/js/jquery.min.js"></script>
+<script src="../../static/js/chat.js" defer></script>
 
 </body>
 </html>

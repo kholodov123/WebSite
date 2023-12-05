@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fd1945-47a1-4b1c-960b-add76765b924" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/WebSite/store/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebSite/store/static/js/chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/store/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/store/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/contact_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/contact_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/policy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +38,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Sashka/PycharmProjects/WebSite",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sashka/PycharmProjects/WebSite&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sashka\PycharmProjects\WebSite\WebSite\store\templates" />
+      <recent name="C:\Users\Sashka\PycharmProjects\WebSite\WebSite\store\templates\registration" />
       <recent name="C:\Users\Sashka\PycharmProjects\WebSite\WebSite\store\templates\catalog" />
       <recent name="C:\Users\Sashka\PycharmProjects\WebSite\WebSite\store" />
-      <recent name="C:\Users\Sashka\PycharmProjects\WebSite\WebSite\store\templates\registration" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -142,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701518538149</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit">
+      <option name="closed" value="true" />
+      <created>1701598024764</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701598024764</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
