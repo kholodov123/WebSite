@@ -4,7 +4,7 @@ from django.views import generic
 from django.views.generic import CreateView, FormView
 
 from .forms import RegisterForm
-from .models import Product, Cart, CartItem, WatchedList
+from .models import *
 from django.http import JsonResponse
 import json
 from django.contrib import messages
@@ -62,6 +62,17 @@ def feedback(request):
 def info(request):
     context = {}
     return render(request, "info.html", context)
+
+
+def searchBar(request):
+    if request.method == 'GET':
+        query = request.GET.get('query')
+        if query:
+            products = Product.objects.filter(name__contains=query)
+            return render(request, 'searchbar.html', {'products': products})
+        else:
+            print('No information to show')
+            return request(request, 'searchbar.html', {})
 
 
 def cart(request):

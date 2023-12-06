@@ -45,7 +45,7 @@
         justify-content:space-between;
     }
 
-    .navbar .logo a{
+    .navbar .logo{
         font-size:1.5rem;
         font-weight:bold;
     }
@@ -142,6 +142,14 @@
         height:100vh;
     }
 
+    section#hero{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        color:#fff;
+    }
     #hero h1{
         display:flex;
         margin:auto;
@@ -150,13 +158,28 @@
         font-size: 4rem;
         font-weight:bold;
         margin-bottom:1rem;
-        margin-top:290px;
+        margin-top:230px;
     }
 
     #hero p{
         display:flex;
         margin:auto;
         font-size:20px;
+    }
+    #hero .searchbar{
+        margin-top:50px;
+    }
+    .d-flex input{
+        height:40px;
+        width:250px;
+        background:transparent;
+        border:none;
+        outline:none;
+        border:2px solid rgba(255, 255, 255, .2);
+        border-radius:40px;
+        font-size:16px;
+        color:#fff;
+        padding:20px 45px 20px 20px;
     }
 
     .about{
