@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32fd1945-47a1-4b1c-960b-add76765b924" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/WebSite/store/templates/searchbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/WebSite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/WebSite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/static/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/static/js/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/store/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/registration/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebSite/store/templates/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/templates/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebSite/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebSite/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701788504170</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit">
+      <option name="closed" value="true" />
+      <created>1701842655881</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701842655881</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

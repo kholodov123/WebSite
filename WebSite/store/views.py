@@ -59,11 +59,6 @@ def feedback(request):
     return render(request, "contact_form.html", context)
 
 
-def info(request):
-    context = {}
-    return render(request, "info.html", context)
-
-
 def searchBar(request):
     if request.method == 'GET':
         query = request.GET.get('query')
